@@ -1,7 +1,9 @@
 name: ci
 on: [push, pull_request]
+permissions:
+  contents: read
 jobs:
-  lint:
+  validate:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -9,3 +11,13 @@ jobs:
       - run: uv sync
       - run: uv run ruff check .
       - run: uv run ruff format --check .
+      - run: uv run pytest -q
+      - run: uv run python scripts/traceability.py
+      # the matrix is evidence: keep it with the run, and fail if the committed one is out of date
+      - uses: actions/upload-artifact@v4
+        with:
+          name: validation-evidence
+          path: |
+            docs/traceability.md
+            reports/test_evidence.json
+      - run: git diff --exit-code docs/traceability.md

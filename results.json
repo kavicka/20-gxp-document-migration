@@ -1,0 +1,112 @@
+{
+ "source": {
+  "documents": 294,
+  "injected_defects": 45,
+  "clean": 249
+ },
+ "baseline": {
+  "loaded": 289,
+  "defective_loaded": 40,
+  "accuracy": {
+   "per_field": {
+    "document_type": 0.161,
+    "study_number": 0.297,
+    "major_version": 0.482,
+    "minor_version": 0.582,
+    "lifecycle_state": 0.269,
+    "effective_date": 0.249,
+    "country": 0.779
+   },
+   "records_fully_correct": 0.0,
+   "n": 249
+  }
+ },
+ "pipeline": {
+  "dry_run_matches_real": true,
+  "loaded": 249,
+  "quarantined": 45,
+  "defective_loaded": 0,
+  "false_rejects": 0,
+  "per_defect": {
+   "unknown_doc_type": {
+    "n": 5,
+    "detected": 5,
+    "loaded": 0
+   },
+   "invalid_date": {
+    "n": 5,
+    "detected": 5,
+    "loaded": 0
+   },
+   "future_date": {
+    "n": 5,
+    "detected": 5,
+    "loaded": 0
+   },
+   "unknown_study": {
+    "n": 5,
+    "detected": 5,
+    "loaded": 0
+   },
+   "missing_file": {
+    "n": 5,
+    "detected": 5,
+    "loaded": 0
+   },
+   "checksum_mismatch": {
+    "n": 5,
+    "detected": 5,
+    "loaded": 0
+   },
+   "duplicate": {
+    "n": 5,
+    "detected": 5,
+    "loaded": 0
+   },
+   "invalid_version": {
+    "n": 5,
+    "detected": 5,
+    "loaded": 0
+   },
+   "missing_title": {
+    "n": 5,
+    "detected": 5,
+    "loaded": 0
+   }
+  },
+  "detection_rate": 1.0,
+  "accuracy": {
+   "per_field": {
+    "document_type": 1.0,
+    "study_number": 1.0,
+    "major_version": 1.0,
+    "minor_version": 1.0,
+    "lifecycle_state": 1.0,
+    "effective_date": 1.0,
+    "country": 1.0
+   },
+   "records_fully_correct": 1.0,
+   "n": 249
+  },
+  "reconciled": true,
+  "content_verified": 249,
+  "docs_per_second": 317.1,
+  "rerun_loaded": 0,
+  "rerun_target_unchanged": true
+ },
+ "controls": {
+  "audit_update_blocked": true,
+  "tamper_detected": true,
+  "tamper_first_broken_seq": 42,
+  "corrupted_files_found": 1,
+  "corrupted_file_is_the_one": true
+ },
+ "archive": {
+  "tables": 3,
+  "rows": 776,
+  "verified": true,
+  "tamper_detected": true,
+  "retain_until": "2051-11-01",
+  "seconds": 0.004
+ }
+}

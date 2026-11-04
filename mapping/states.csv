@@ -1,0 +1,8 @@
+legacy_value,target_value
+Final,Approved
+Approved,Approved
+Effective,Approved
+draft,Draft
+In Review,Draft
+Superseded,Superseded
+Obsolete,Superseded
